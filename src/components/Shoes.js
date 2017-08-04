@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import data from '../data/data'
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 
  export default class Shoes extends Component {
   render() {
@@ -11,7 +10,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
       {data[2].items.map((shoes) => <div className="col-sm-6" key={data[2].name}>
 
 
-       <h5>{shoes.name}</h5>
+       <Link to={`/ShowItem/${shoes.id}`} ><h5 className="title">{shoes.name}</h5></Link>
          <div className="w3-card-4" style={{width:"50%"}}>
        <img src={shoes.image}/>
        <h5>{shoes.brand}</h5>

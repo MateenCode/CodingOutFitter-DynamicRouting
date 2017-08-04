@@ -1,6 +1,7 @@
 h1{
   font-family: monospace;
   font-weight: bolder;
+  text-align: center;
 }
 
 
@@ -29,10 +30,21 @@ img{
 
 h5{
   text-align: center;
+  padding-top: 20px;
+}
+
+a{
+  text-decoration-line: none;
+}
+
+a :hover{
+  color: skyblue;
+  font-size: 24px;
 }
 
 
 .w3-card-4{
   text-align: center;
   margin: 0 auto;
+  margin-top: 25px;
 }

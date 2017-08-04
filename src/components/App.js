@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import BaseLayout from './BaseLayout.js'
-
+import ShowItem from './ShowItem.js'
 
 import Home from './Home.js';
 import Tops from './Tops.js';
@@ -22,8 +22,10 @@ class App extends Component {
             <Route path="/Tops" component={Tops} />
             <Route path="/Bottoms" component={Bottoms} />
             <Route path="/Shoes" component={Shoes} />
+            <Route path='/ShowItem/:id' component={ShowItem} />
             <Route path="/" component={Home} />
-            
+
+
             </Switch>
           </BaseLayout>
         </BrowserRouter>
