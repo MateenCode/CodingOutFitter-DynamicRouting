@@ -10,21 +10,26 @@ import '../styles/App.css';
    constructor(props) {
       super(props)
       this.state = {
-        image:'',
+        image: '' ,
         name: '',
         brand: '',
         price: ''
-}
+      }
+    }
 
-  this.setState({
 
-    image: data.image,
-    name: data.name,
-    brand: data.brand,
-    price: data.price
+    componentDidMount() {
+      const { id } = this.props.match.params;
 
-});
-}
+            this.setState({
+              image: data[id].items[id].image,
+              name: data[id].items[id].name,
+              brand: data[id].items[id].brand,
+              price: data[id].items[id].price
+            });
+
+    }
+
 
 
 
